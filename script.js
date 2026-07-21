@@ -14,6 +14,8 @@ const modeChips = document.querySelectorAll(".mode-chip");
 const heroLead = document.querySelector("#hero-lead");
 const modeNote = document.querySelector("#mode-note");
 const modeCta = document.querySelector("#mode-cta");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let typewriterTimer;
 
 document.documentElement.classList.add("js-ready");
 
@@ -75,7 +77,7 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => observer.observe(section));
 
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .profile-panel, .split-layout > *, .section-heading, .skill-card, .lab-copy, .orbit-shell, .project-visual, .project-content, .education-grid > *, .mini-card, .contact-grid > *"
+  ".hero-copy, .profile-panel, .split-layout > *, .section-heading, .skill-card, .lab-copy, .orbit-shell, .project-visual, .ml-project-visual, .kitchen-project-visual, .project-showcase-visual, .project-content, .education-grid > *, .mini-card, .contact-grid > *"
 );
 
 revealTargets.forEach((target, index) => {
@@ -122,6 +124,30 @@ const modeContent = {
   },
 };
 
+const typeHeroLead = (text) => {
+  if (!heroLead) return;
+
+  window.clearInterval(typewriterTimer);
+  heroLead.textContent = "";
+  heroLead.classList.remove("is-switching");
+
+  if (reduceMotion) {
+    heroLead.textContent = text;
+    return;
+  }
+
+  let characterIndex = 0;
+  heroLead.classList.add("is-typing");
+  typewriterTimer = window.setInterval(() => {
+    heroLead.textContent += text.charAt(characterIndex);
+    characterIndex += 1;
+
+    if (characterIndex >= text.length) {
+      window.clearInterval(typewriterTimer);
+      heroLead.classList.remove("is-typing");
+    }
+  }, 55);
+};
 const applyMode = (modeKey, options = { persist: true }) => {
   const mode = modeContent[modeKey];
   if (!mode || !heroLead || !modeNote || !modeCta) return;
@@ -136,7 +162,7 @@ const applyMode = (modeKey, options = { persist: true }) => {
   heroLead.classList.add("is-switching");
 
   window.setTimeout(() => {
-    heroLead.textContent = mode.lead;
+    typeHeroLead(mode.lead);
     modeNote.textContent = mode.note;
     modeCta.innerHTML = `${mode.cta} <span class="button-arrow" aria-hidden="true"></span>`;
 
