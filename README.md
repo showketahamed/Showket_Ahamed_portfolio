@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0d1117,40:0f172a,75:312e81,100:2563eb&text=Showket%20Ahamed&fontColor=f8fafc&fontSize=44&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20Data%20Analytics%20Enthusiast%20%7C%20UI%2FUX%20Designer&descAlignY=58&animation=fadeIn" alt="Showket Ahamed header" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:0d1117,40:0f172a,75:312e81,100:2563eb&text=Showket%20Ahamed&fontColor=f8fafc&fontSize=44&fontAlignY=38&desc=Full%20Stack%20Developer%20%7C%20Data%20Analyst%20%7C%20UI%2FUX%20Designer&descAlignY=58&animation=fadeIn" alt="Showket Ahamed header" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=800&color=60A5FA&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=140&lines=Hi+%F0%9F%91%8B+I'm+Showket+Ahamed;Full+Stack+Developer;AI+Automation+Enthusiast;Data+Analytics+Enthusiast;UI%2FUX+Designer" alt="Typing intro" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2500&pause=800&color=60A5FA&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=140&lines=Hi+%F0%9F%91%8B+I'm+Showket+Ahamed;Full+Stack+Developer;Data+Analyst;Data+Analytics+Enthusiast;UI%2FUX+Designer" alt="Typing intro" />
 
 <p>
   I build modern web products, transform data into actionable insight, and craft digital experiences that are clean, practical, and user-focused.
